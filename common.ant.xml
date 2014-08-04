@@ -63,6 +63,10 @@
   <property name="emma.dir" value="${gwt.tools.redist}/emma"/>
   <property name="emma.filter.exclude" value=""/>
 
+  <!-- Versions for the international components (icu4j and cldr). -->
+  <property name="icu.version" value="53.1"/>
+  <property name="cldr.version" value="25" />
+
   <!-- Sanity check -->
   <available file="${gwt.tools}" type="dir" property="gwt.tools.exists"/>
   <fail unless="gwt.tools.exists"
