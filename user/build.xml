@@ -440,6 +440,22 @@
     </gwt.junit>
   </target>
 
+  <target name="test.i18n"
+          depends="compile, compile.tests">
+    <fileset id="test.i18n" dir="${javac.junit.out}"
+             includes="**/I18*Suite.class"
+             excludes=""/>
+    <gwt.junit test.name="test.coverage.htmlunit"
+               test.args="${test.args}"
+               test.jvmargs="${test.jvmargs}"
+               test.out="${junit.out}/i18n"
+               test.cases="test.i18n">
+      <extraclasspaths>
+        <path refid="test.extraclasspath"/>
+      </extraclasspaths>
+    </gwt.junit>
+  </target>
+
   <target name="test.coverage.htmlunit"
           depends="compile, compile.tests"
           description="Run tests for coverage support">
